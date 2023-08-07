@@ -10,7 +10,7 @@ An async/await compatible python wrapper for the Reloadly API
 # run this in the command propt or terminal
 pip install reloadlyio
 
-#or run this to get the latest dev version
+# or run this to get the latest dev version
 pip install git+https://github.com/flalugli/reloadlyio.git
 ```
 
