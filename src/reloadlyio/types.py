@@ -1,4 +1,4 @@
-from typing import TypedDict
+from typing import TypedDict, Required
 
 class BerearResponse(TypedDict):
     access_token : str
@@ -13,17 +13,17 @@ class RecipientPhoneDetails(TypedDict):
     phoneNumber:int
     "Phone number of the receiver"
 
-class OrderData(TypedDict):
-    productId:int
+class OrderData(TypedDict, total=False):
+    productId:Required[int]
     "the id of the product"
     countryCode:str
-    "The country code the card should work in"
-    quantity:int
+    "The country code of the card sender"
+    quantity:Required[int]
     "The amount of cards to purchase"
-    unitPrice:int
-    "The price of each giftcard"
+    unitPrice:Required[int]
+    "The desired price, and balance, of each giftcard"
     customIdentifier:str
-    senderName:str
+    senderName:Required[str]
     "The name of the sender"
     recipientEmail:str
     "The email the giftcard will be emailed to"
