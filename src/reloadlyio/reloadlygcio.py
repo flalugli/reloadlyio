@@ -151,14 +151,13 @@ class ReloadlyGCIO:
             The API response containing details of the country
         """
 
-        
         endpoint = f"countries/{isocode}"
 
         result = await self.api_get_request(endpoint=endpoint, **kwargs)
 
         return result
     
-    async def get_products(self, params: ProductsParams | dict, **kwargs):
+    async def products(self, params: ProductsParams | dict, **kwargs):
         """Retrieve the details of every gift card product that can be purchased on Reloadly
 
         Parameters
