@@ -129,7 +129,7 @@ class ReloadlyGCIO:
         Returns
         -------
         dict
-            _description_
+            The API response containing the countries informations
         """
 
         endpoint = "countries"
@@ -168,8 +168,8 @@ class ReloadlyGCIO:
 
         Returns
         -------
-        _type_
-            _description_
+        dict
+            The API response containing products informations
         """
         endpoint = "products"
         
