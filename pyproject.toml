@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reloadlygcio"
+version = "0.0.1a"
+description = "Python Async wrapper for the Reloadly API"
+authors = [
+  { name="flalugli", email="flalugli.dev@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ['python', 'giftcards', 'Reloadly', 'async', 'aiohttp']
+license = {text = "Apache License 2.0"}
+classifiers=[
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+    ]
+dependencies = [
+    "aiohttp",
+]
+
+[project.urls]
+Homepage = "https://github.com/flalugli/reloadlyio"
+
+[tool.setuptools.packages.find]
+where = ["src"]
