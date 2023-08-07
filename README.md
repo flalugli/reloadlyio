@@ -1,4 +1,4 @@
-# AsynCoinpayments  
+# ReloadlyIO  
 
 An async/await compatible python wrapper for the Reloadly API  
 
@@ -8,7 +8,7 @@ An async/await compatible python wrapper for the Reloadly API
 
 ```
 # run this in the command propt or terminal
-pip install asyncoinpayments  
+pip install reloadlyio  
 ```
 
 ## Features  
