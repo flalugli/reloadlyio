@@ -30,7 +30,7 @@ class OrderData(TypedDict, total=False):
     recipientPhoneDetails: RecipientPhoneDetails
     "The phone details of the receiver"
 
-class ProductsParams(TypedDict):
+class ProductsParams(TypedDict, total=False):
     size : int
     "The number of gift card products to be retrieved on a page"
     page : int

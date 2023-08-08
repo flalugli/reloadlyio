@@ -175,7 +175,26 @@ class ReloadlyGCIO:
         result = await self.api_get_request(endpoint=endpoint, params=params, **kwargs)
         
         return result
+    
+    async def product_by_id(self, productid:int, **kwargs) -> dict:
+        """Retrieve the details of a gift card  
 
+        Parameters
+        ----------
+        productid : int
+            The id of the giftcard to retrieve the details of
+
+        Returns
+        -------
+        dict
+            The API response containing the giftcard informations
+        """
+
+        endpoint = f"products/{productid}"
+        result = await self.api_get_request(endpoint=endpoint, **kwargs)
+
+        return result
+    
     async def product_by_isocode(self, isocode:str, **kwargs) -> dict:
         """Retrieve the details of every giftcard product available to a country by making a request with the country's ISO code. 
 
