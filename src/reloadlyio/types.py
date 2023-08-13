@@ -1,5 +1,9 @@
-from typing import Required, TypedDict
-
+import sys
+#version check
+if sys.version_info < (3, 11): #for python 3.8-3.10 support
+    from typing_extensions import NotRequired, TypedDict
+else: # for python 3.11+ as per PEP 655
+    from typing import NotRequired, TypedDict
 
 class BerearResponse(TypedDict):
     access_token: str
@@ -17,20 +21,20 @@ class RecipientPhoneDetails(TypedDict):
 
 
 class OrderData(TypedDict, total=False):
-    productId: Required[int]
+    productId: int
     "the id of the product"
-    countryCode: str
+    countryCode: NotRequired[str]
     "The country code of the card sender"
-    quantity: Required[int]
+    quantity: int
     "The amount of cards to purchase"
-    unitPrice: Required[int]
+    unitPrice: int
     "The desired price, and balance, of each giftcard"
     customIdentifier: str
-    senderName: Required[str]
+    senderName: str
     "The name of the sender"
-    recipientEmail: str
+    recipientEmail: NotRequired[str]
     "The email the giftcard will be emailed to"
-    recipientPhoneDetails: RecipientPhoneDetails
+    recipientPhoneDetails: NotRequired[RecipientPhoneDetails]
     "The phone details of the receiver"
 
 
