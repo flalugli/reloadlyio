@@ -31,5 +31,9 @@ line-length = 88
 target-version = ['py37', 'py38']
 include = '\.pyi?$'
 
+[tool.isort]
+profile = "black"
+src_paths = ["src", "test"]
+
 [tool.setuptools.packages.find]
 where = ["src"]

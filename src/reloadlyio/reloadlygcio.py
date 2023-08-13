@@ -1,7 +1,9 @@
-import aiohttp
 import json
 import time
 from logging import getLogger
+
+import aiohttp
+
 from .types import *
 
 logger = getLogger(__name__)
