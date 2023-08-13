@@ -3,6 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
+dynamic = ["dependencies"]
 name = "reloadlygcio"
 version = "0.0.4a"
 description = "Python Async wrapper for the Reloadly API"
@@ -19,12 +20,13 @@ classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ]
-dependencies = [
-    "aiohttp",
-]
 
 [project.urls]
 Homepage = "https://github.com/flalugli/reloadlyio"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
 
 [tool.black]
 line-length = 88

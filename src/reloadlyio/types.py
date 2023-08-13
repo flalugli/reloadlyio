@@ -52,3 +52,6 @@ class ProductsParams(TypedDict, total=False):
 class DiscountParams(TypedDict):
     size: int
     page: int
+
+
+#TODO Add types for every api response, should all be TypedDict
