@@ -35,5 +35,8 @@ include = '\.pyi?$'
 profile = "black"
 src_paths = ["src", "test"]
 
+[tool.mypy]
+static = true
+
 [tool.setuptools.packages.find]
 where = ["src"]

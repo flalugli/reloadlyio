@@ -23,8 +23,8 @@ class ReloadlyGCIO:
         test = "-sandbox" if test_mode else ""
         self.base_url = f"https://giftcards{test}.reloadly.com/"
 
-        self.bearer_response: BerearResponse = None
-        self.bearer_exipiries_at: int = None
+        self.bearer_response: BerearResponse | None = None
+        self.bearer_exipiries_at: int | None = None
 
         self.api_version = api_version
 
@@ -80,7 +80,7 @@ class ReloadlyGCIO:
             pass
 
     async def _request(
-        self, method: str, url: str, headers: dict = None, **kwargs
+        self, method: str, url: str, headers: dict | None = None, **kwargs
     ) -> dict:
         """perform a get or post request to the Reloadly Giftcard API"""
         if not headers:
