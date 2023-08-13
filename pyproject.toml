@@ -26,5 +26,10 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/flalugli/reloadlyio"
 
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38']
+include = '\.pyi?$'
+
 [tool.setuptools.packages.find]
 where = ["src"]
