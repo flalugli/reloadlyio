@@ -1,8 +1,10 @@
 import aiohttp
 import json
 import time
+from logging import getLogger
 from .types import *
 
+logger = getLogger(__name__)
 
 class ReloadlyGCIO:
     
@@ -89,9 +91,11 @@ class ReloadlyGCIO:
             return result
     
     async def get(self, url, **kwargs) -> dict:
+        logger.debug(f"Performing a get request to {url}")
         return await self._request("get", url=url, **kwargs)
     
     async def post(self, url, data = None, **kwargs) -> dict:
+        logger.debug(f"Performing a post request to {url}")
         return await self._request("post", url=url, data=data, **kwargs)
 
     async def api_post_request(self ,endpoint:str, data = None, **kwargs):
