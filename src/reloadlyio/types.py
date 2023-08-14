@@ -1,9 +1,11 @@
 import sys
+
 #version check
-if sys.version_info < (3, 11): #for python 3.8-3.10 support
+if sys.version_info < (3, 11):  # for python 3.8-3.10 support
     from typing_extensions import NotRequired, TypedDict
-else: # for python 3.11+ as per PEP 655
+else:  # for python 3.11+ as per PEP 655
     from typing import NotRequired, TypedDict
+
 
 class BerearResponse(TypedDict):
     access_token: str
@@ -58,4 +60,4 @@ class DiscountParams(TypedDict):
     page: int
 
 
-#TODO Add types for every api response, should all be TypedDict
+# TODO Add types for every api response, should all be TypedDict
